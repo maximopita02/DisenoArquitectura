@@ -1,0 +1,72 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+ 
+}
+
+header {
+    background-color: #333;
+    padding: 10px;
+position: relative;
+}
+
+
+.Logo img {
+    width: 95px; 
+    height: 85px; 
+    left: 20px;
+}
+
+.menu-list {
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}
+
+.menu-list li {
+    margin-right: 20px;
+}
+
+.menu-list li a {
+    color: #fff;
+    text-decoration: none;
+}
+.ProyectosFotos img{
+width: 345px; 
+height: 240px;
+
+}
+footer{
+    background-color: #333;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+}
+.ContenedorEstudios{
+    border: solid 2 px;
+padding: 30px;
+display: flex;
+flex-direction: column;
+}
+.estilosDiv{
+       border: solid 2 px;
+padding: 30px;
+display: flex;
+flex-direction: column;
+}
+.LogosImg img{
+    height:48px ;
+    width:49px ;
+
+}
+.LogosImg {
+    display:flex ;
+    justify-content:space-between;
+    align-items: flex-end;
+
+}
+.FotosPrinci img{
+    width: 345px; 
+height: 240px;
+}
