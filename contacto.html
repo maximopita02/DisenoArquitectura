@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <title>Contacto</title>
+</head>
+<body>
+    <header>
+        <div class="Logo">
+            <img src="Imagenes/logo-removebg-preview.png" alt="Logo" >
+        </div>
+        <input type="checkbox" id="check">
+        <label for="check" class="mostrar-menu">
+            &#8801
+        </label>
+        <nav class="Menu">
+        <a href="index.html">Inicio</a>
+        <a href="SobreNosotros.html">Sobre Nosotros</a>
+        <a href="Proyectos.html">Proyectos</a>
+        <a href="contacto.html">Contacto</a>
+        <label for="check" class="esconder-menu">
+            &#215
+        </label>
+        </nav>
+    </header>
+    <section class="contact">
+        <div class="u-wrapper">
+          <div class="contact-content">
+    
+            <form id="form" action="" class="form">
+              <h3 class="tag"><span>Contactenos</span></h3>
+              <label for="name">Nombre Completo <span>*</span></label>
+              <input name="name" required type="text" id="name" placeholder="Maximo">
+              <label for="email">Correo electrónico <span>*</span></label>
+              <input name="email" type="text" id="email" required placeholder="maximo@gmail.com">
+              <label for="message">Mensaje</label>
+              <textarea id="message" name="message" id="" cols="30" rows="10"></textarea>
+              <button type="submit" class="btn primary full">Enviar Mensaje</button>
+            </form>
+            <a href="mailto:g3digitaldesign@gmail.com" id="trucazo"></a>
+          </div>
+        </div>
+      </section>
+    <section id="Iconos">
+        <div id="Contenido-Iconos">
+            <div>    
+            <a href="https://api.whatsapp.com/send?phone=5491161061644&text=Hola%21" target="_blank"><img src="Imagenes/icons8-whatsapp-50.png" alt="Logo de Whatsapp"></a>
+                <p>1161061644</p>
+            </div>
+            <div><a href="https://www.instagram.com/hernanpitaphoto/?igsh=cWo2N2V3Y2c3a2hv" target="_blank"><img src="Imagenes/icons8-instagram-48.png" alt="Logo de Intagram"></a>
+                <p>@hernanpitaphoto</p>
+            </div>
+                <div><a href="mailto:g3digitaldesign@gmail.com" target="_blank"><img src="Imagenes/icons8-nuevo-post-100.png" alt="Logo de Email"></a>
+            <p>g3digitaldesign@gmail.com</p>
+        </div>
+        </div>
+        </section> 
+        <footer><p>LOS RENDERS EXPUESTOS EN ESTE BROCHURE SON PARTE DE MIS PROCESOS DE DISEÑO EN PROYECTOS 
+            QUE FUERON CONSTRUIDOS  
+            LOS DERECHOS DE IMAGEN SON DE NUESTRA AUTORÍA </p>
+        </footer>
+        <script>
+            const $form = document.querySelector('#form')
+            const $buttonMailto = document.querySelector('#trucazo')
+        
+            $form.addEventListener('submit', handleSubmit)
+        
+            function handleSubmit(event) {
+              event.preventDefault()
+              const form = new FormData(this)
+              $buttonMailto.setAttribute('href', `mailto:g3digitaldesign@gmail.com?subject=nombre ${form.get('name')}  correo ${form.get('email')}&body=${form.get('message')}`)
+              $buttonMailto.click()
+            }
+          </script>
+</body>
+</html>
